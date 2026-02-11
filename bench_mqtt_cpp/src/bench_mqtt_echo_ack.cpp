@@ -130,7 +130,7 @@ struct EchoContext {
   std::mutex mu;
 };
 
-void on_message(struct mosquitto* /*mosq*/, void* userdata,
+void on_message(struct mosquitto* mosq, void* userdata,
                 const struct mosquitto_message* msg) {
   auto* ctx = static_cast<EchoContext*>(userdata);
   if (!ctx) return;

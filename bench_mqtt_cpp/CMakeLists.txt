@@ -8,7 +8,7 @@ include(CheckIncludeFile)
 
 find_package(PkgConfig QUIET)
 if(PkgConfig_FOUND)
-  pkg_check_modules(MOSQUITTO QUIET libmosquitto)
+  pkg_check_modules(MOSQUITTO IMPORTED_TARGET QUIET libmosquitto)
 endif()
 
 if(MOSQUITTO_FOUND)
